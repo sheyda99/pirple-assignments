@@ -1,0 +1,62 @@
+body {
+    background-color: thistle;
+}
+
+p {
+    font-size: 24px;
+}
+
+li {
+    font-size: 18px;
+}
+
+h1.special-heading {
+    padding: 15px 0;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    padding: 15px 0;
+    font-size: 24px;
+}
+
+img{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+ul, ol {
+    border: 3px solid darkmagenta;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*MY RESOURCE: https://www.w3schools.com/cssref/default.asp*/
+
+#ingredients {
+    list-style-type: square;
+}
+
+#links {
+    list-style-type: circle;
+}
+
+#directions {
+    list-style-type: upper-roman;
+}
+
+p span {
+    font-style: italic;
+}
+
+p span.last-span{
+    text-decoration: underline;
+}
+
+p span.first-span {
+    font-style: normal;
+    color: red;
+}
