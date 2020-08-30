@@ -1,0 +1,33 @@
+body {
+    background-color: thistle;
+}
+
+p {
+    font-size: 28px;
+}
+
+li {
+    font-size: 18px;
+}
+
+h1 {
+    padding-bottom: 15px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h3 {
+    padding-bottom: 15px;
+}
+
+/*MY RESOURCE: https://www.w3schools.com/cssref/default.asp*/
+
+img{
+    width: 40%;
+}
+
+ul, ol {
+    border: 3px solid darkmagenta;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
