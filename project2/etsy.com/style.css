@@ -1,0 +1,995 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    color: #222;
+}
+
+@font-face {
+    font-family: "Graphik Webfont"; 
+    src: url('fonts/Graphik-Regular-Web.woff2');
+} 
+
+@font-face {
+    font-family: "Guardian-EgypTT";
+    src: url('fonts/Guardian-EgypTT-Light.woff2');
+}
+
+
+
+/*HEADER OF THE PAGE*/
+
+#intro {
+    width: 100%;
+    height: 72px;
+    padding: 12px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#logo {
+    color: #f1651f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+#intro i {
+    padding: 12px 21px 12px 15px;
+    font-size: 24px;
+}
+
+
+#search {
+    width: 900px;
+    background-color: rgba(34, 34, 34, 0.07);
+    border-radius: 96px;
+    box-shadow: 1px 2px 4px 0 rgba(34, 34, 34, 0.1) inset;
+    line-height: 28px;
+    display: flex;
+    order: 2;
+}
+
+#search-input {
+    width: 100%;
+    padding: 9px 42px 9px 18px;
+    background-color: transparent;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-right: none;
+    border-radius: 96px 0 0 96px;
+    outline: none;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+#search-btn {
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-left: none;
+    border-radius: 0 96px 96px 0;
+}
+
+#search:hover #search-input, #search:hover #search-btn {
+    border-color: rgba(34, 34, 34, 0.5);
+}
+
+#search-btn:hover {
+    background-color: rgba(34, 34, 34, 0.1);
+}
+
+#search:focus-within {
+    background-color: #fff;
+}
+
+#search:focus-within #search-input {
+    border-color: #222;
+}
+
+#search:focus-within #search-btn {
+    background-color: #222;
+    border-color: #222;
+}
+
+#search:focus-within #search-btn i {
+    color: #fff;
+}
+
+
+#sign-in-btn {
+    margin-right: 6px;
+    padding: 9px 15px;
+    border: none;
+    background-color: transparent;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18.2px;
+    cursor: pointer;
+    order: 3;
+}
+
+#sign-in-btn:hover, #cart:hover {
+    background-color: rgba(34, 34, 34, 0.07);
+    border-radius: 96px;
+}
+
+
+#cart {
+    position: relative;
+    order: 4;
+}
+
+#cart-tooltip {
+    display: none;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #222;
+    color: #fff;
+    position: absolute;
+    bottom: -45px;
+    left: -5px;
+}
+
+#cart-tooltip::after {
+    content: "";
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent #222 transparent;
+    position: absolute;
+    top: -13px;
+    right: 7px;
+}
+
+#cart:hover #cart-tooltip {
+    display: inline;
+}
+
+@media only screen and (max-width: 1100px) {
+    #intro {
+        padding: 6px 12px 0;
+        flex-wrap: wrap;
+    }
+
+    #sign-in-btn {
+        order: 2;
+        margin-left: auto;
+    }
+
+    #cart {
+        order: 3;
+    }
+
+    #search {
+        order: 4;
+        width: calc(100% - 50px);
+        margin-top: 10px;
+        margin-left: auto;
+    }
+}
+
+
+
+/*NAVIGATION BAR OF THE PAGE*/
+
+#head-navbar {
+    padding: 0 18px;
+}
+
+#head-navbar i {
+    display: none;
+}
+
+#head-navbar ul {
+    padding: 0 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#head-navbar ul li {
+    padding-bottom: 12px;
+    margin: 4px 12px 0 0;
+    border-bottom: 2px solid transparent;
+}
+
+#head-navbar ul li a {
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+}
+
+#head-navbar ul li:hover {
+    border-bottom: 2px solid #222;
+}
+
+@media only screen and (max-width: 1100px) {
+    #head-navbar {
+        height: 55px;
+    }
+
+    #head-navbar ul {
+        display: none;
+    }
+
+    #head-navbar i {
+        display: inline;
+        font-size: 24px;
+        line-height: 35px;
+        cursor: pointer;
+    }
+}
+
+
+
+/*FIRST SECTION OF MAIN*/
+
+#first-section {
+    width: 100%;
+    min-height: 340px;
+    background-color: #DDEBE3;
+}
+
+#first-section h1 {
+    padding: 30px 12px 12px;
+    font-family: "Guardian-EgypTT", serif;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 36px;
+}
+
+#first-section > div {
+    padding: 0 36px;
+    margin-bottom: 18px;
+}
+
+#first-section h2 {
+    padding-bottom: 12px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 28px;
+}
+
+#shopping-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shopping-window {
+    width: 16%;
+    padding: 9px 18px 18px;
+}
+
+.shopping-window img {
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 50%;
+}
+
+.shopping-window a {
+    display: inline-block;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.shopping-window:hover i {
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 1100px) {
+    #shopping-container {
+        flex-wrap: wrap;
+    }
+
+    .shopping-window {
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #first-section > div {
+        padding: 0 6px;
+        margin-bottom: 18px;
+    }
+
+    .shopping-window {
+        padding: 6px 9px 18px;
+    }
+}
+
+
+
+/*HOW ETSY WORKS*/
+
+#how-etsy-works {
+    width: 100%;
+    min-height: 150px;
+}
+
+#how-etsy-works > div {
+    min-height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#how-etsy-works .container {
+    width: 32%;
+    padding: 0 36px;
+}
+
+#how-etsy-works .container h3 {
+    padding: 0 18px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 25.6px;
+}
+
+#how-etsy-works .container h3 i {
+    color: #E55400;
+    font-size: 24px;
+}
+
+#how-etsy-works .container p {
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 22.4px;
+}
+
+@media only screen and (max-width: 1100px) {
+    #how-etsy-works .container {
+        padding: 0 12px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #how-etsy-works > div {
+        flex-wrap: wrap;
+    }
+    
+    #how-etsy-works .container {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+
+/*POPULAR RIGHT NOW SECTION*/
+
+#popular-right-now {
+    width: 100%;
+    padding: 0 36px;
+    margin: 30px 0;
+}
+
+#popular-right-now h2 {
+    margin-bottom: 30px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 36.4px;
+}
+
+#popular-right-now ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#popular-right-now ul li {
+    width: 16%;
+    padding: 9px;
+}
+
+#popular-right-now ul li img {
+    width: 100%;
+}
+
+#popular-right-now ul li h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22.4px;
+}
+
+#popular-right-now ul li p, #popular-right-now ul li .count {
+    color: #595959;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 19px;
+}
+
+#popular-right-now ul li i {
+    font-size: 14px;
+}
+
+#popular-right-now ul li .cost {
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25.6px;
+}
+
+#popular-right-now ul li .discount {
+    color: #2E8539;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+#popular-right-now ul li .discount span {
+    color: #2E8539;
+    text-decoration: line-through;
+}
+
+#popular-right-now ul li .free {
+    padding: 3px 6px;
+    background-color: rgb(212, 233, 215);
+    border-radius: 15px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 11px;
+}
+
+#popular-right-now ul li .bestseller {
+    padding: 3px 6px;
+    background-color: rgb(253, 235, 210);
+    border-radius: 15px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 11px;
+}
+
+#popular-right-now ul li .bestseller i {
+    font-size: 11px;
+}
+
+#popular-right-now ul li .bestseller {
+    padding: 3px 6px;
+    background-color: rgb(253, 235, 210);
+    border-radius: 15px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 11px;
+}
+
+@media only screen and (max-width: 1100px) {
+    #popular-right-now {
+        padding: 0 12px;
+    }
+
+    #popular-right-now ul {
+        flex-wrap: wrap;
+    }
+    
+    #popular-right-now ul li {
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #popular-right-now {
+        padding: 0 6px;
+    }
+    
+    #popular-right-now ul li {
+        width: 50%;
+    }
+}
+
+
+
+/*GIFTS BY SEARCH SECTION*/
+
+#gifts-by-search {
+    width: 100%;
+    padding: 18px 36px;
+}
+
+#gifts-by-search > div {
+    margin-bottom: 12px;
+}
+
+#gifts-by-search h2 {
+    display: inline-block;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+#gifts-by-search span {
+    padding-left: 12px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+}
+
+
+#gifts-by-search ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#gifts-by-search ul li {
+    width: 16%;
+    padding: 9px;
+}
+
+#gifts-by-search ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-radius: 12px;
+}
+
+#gifts-by-search ul li img {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+#gifts-by-search ul li:hover a {
+    box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+}
+
+#gifts-by-search ul li p {
+    padding: 12px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22.4px;
+}
+
+@media only screen and (max-width: 1100px) {
+    #gifts-by-search {
+        padding: 18px 12px;
+    }
+
+    #gifts-by-search h2, #gifts-by-search span {
+        display: block;
+        text-align: center;
+    }
+
+    #gifts-by-search ul {
+        flex-wrap: wrap;
+    }
+    
+    #gifts-by-search ul li {
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #gifts-by-search {
+        padding: 18px 6px;
+    }
+    
+    #gifts-by-search ul li {
+        width: 50%;
+    }
+}
+
+
+
+/*WHAT IS ETSY? SECTION*/
+
+#what-is-etsy {
+    width: 100%;
+    margin-top: 30px;
+    padding: 54px 18px 66px;
+    background-color: #FDEBD2;
+    position: relative;
+    text-align: center;
+}
+
+#what-is-etsy h2 {
+    margin-bottom: 12px;
+    font-family: "Guardian-EgypTT", serif;
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 48px;
+}
+
+#what-is-etsy > a {
+    margin-bottom: 12px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+    line-height: 19.6px;
+}
+
+#what-is-etsy > a:hover {
+    opacity: 0.5;
+}
+
+#first-container {
+    padding: 36px 18px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#first-container div {
+    width: 33%;
+    margin-bottom: 12px;
+    padding: 0 24px;
+}
+
+#first-container h3 {
+    margin-bottom: 6px;
+    font-family: "Guardian-EgypTT", serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+#first-container p {
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+#second-container {
+    padding: 0 18px;
+}
+
+#second-container h4 {
+    margin-top: 24px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+#second-container a {
+    margin-top: 12px;
+    padding: 12px 18px;
+    display: inline-block;
+    border: 2px solid #222;
+    border-radius: 24px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+#second-container a:hover {
+    box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+}
+
+@media only screen and (max-width: 1100px) {
+    #first-container {
+        flex-wrap: wrap;
+    }
+    
+    #first-container div {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #first-container div {
+        width: 100%;
+    }
+}
+
+
+
+/*SUBSCRIBE SECTION OF THE FOOTER*/
+
+#subscribe {
+    width: 100%;
+    margin-top: 10px;
+    padding: 60px 24px;
+    background-color: #D7E6F5;
+    text-align: center;
+}
+
+#subscribe p {
+    margin-bottom: 18px;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+
+#email {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 96px;
+    box-shadow: 1px 2px 4px 0 rgba(34, 34, 34, 0.1) inset;
+    display: flex;
+}
+
+#email-input {
+    width: 100%;
+    padding: 9px 42px 9px 18px;
+    background-color: transparent;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-right: none;
+    border-radius: 96px 0 0 96px;
+    outline: none;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+#subscribe-btn {
+    padding: 12px 21px 12px 15px;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-left: none;
+    border-radius: 0 96px 96px 0;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22.4px;
+}
+
+#email:hover #email-input, #email:hover #subscribe-btn {
+    border-color: rgba(34, 34, 34, 0.5);
+}
+
+#subscribe-btn:hover {
+    background-color: rgba(34, 34, 34, 0.1);
+}
+
+#email:focus-within #email-input {
+    border-color: #222;
+}
+
+#email:focus-within #subscribe-btn {
+    background-color: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+@media only screen and (max-width: 1100px) {
+    #email {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #email {
+        width: 100%;
+    }
+}
+
+
+
+/*FOOTER NAVIGATION BAR SECTION*/
+
+#foot-navbar {
+    width: 100%;
+    padding: 50px 24px;
+    background-color: #2F466C;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-column {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 12px;
+}
+
+.navbar-column h3 {
+    width: 100%;
+    padding-right: 6px;
+    margin-bottom: 12px;
+    color: #fff;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.navbar-column > ul li {
+    width: 100%;
+    padding: 6px 0;
+    line-height: 18px;
+}
+
+.navbar-column > ul li a {
+    color: #fff;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.navbar-column > ul li a:hover {
+    text-decoration: underline;
+}
+
+
+#contact-links {
+    width: 100%;
+    margin-top: 12px;
+}
+
+#contact-links > a {
+    margin-top: 24px;
+    padding: 6px 15px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 24px;
+}
+
+#contact-links > a:hover {
+    box-shadow: 0 4px 20px rgba(250, 250, 250, 0.15);
+}
+
+#contact-links > a i {
+    padding: 3px 5px;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #2F466C;
+}
+
+#contact-links > a span {
+    margin-left: 6px;
+    color: #fff;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+#contact-links ul {
+    margin-top: 18px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#contact-links ul li {
+    margin-right: 12px;
+}
+
+#contact-links ul li:hover {
+    border-radius: 50%;
+    background-color: rgb(249, 246, 246, 0.1);
+}
+
+#contact-links ul li a {
+    display: inline-block;
+    padding: 6px;
+    margin: 6px;
+}
+
+#contact-links ul li a i {
+    color: #fff;
+    font-size: 26px;
+}
+
+@media only screen and (max-width: 500px) {
+    #foot-navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar-column > ul {
+        padding: 0 6px;
+    }
+}
+
+
+
+/*FOOT SECTION OF THE PAGE*/
+
+#foot {
+    width: 100%;
+    padding: 18px 24px;
+    background-color: #232347;
+    display: flex;
+    justify-content: space-between;
+}
+
+#foot button {
+    padding: 9px 15px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18.2px;
+    cursor: pointer;
+}
+
+#foot button:hover {
+    border-radius: 24px;
+    background-color: rgb(249, 246, 246, 0.1);
+}
+
+#foot button i {
+    color: #fff;
+    font-size: 15px;
+}
+
+
+#foot div {
+    display: flex;
+}
+
+#foot div span {
+    margin-right: 12px;
+    color: #fff;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+}
+
+#foot ul {
+    display: flex;
+    margin-left: 12px;
+}
+
+#foot ul li {
+    margin-right: 18px;
+}
+
+#foot ul li a {
+    color: #fff;
+    font-family: "Graphik Webfont", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: underline;
+    line-height: 18px;
+}
+
+@media only screen and (max-width: 1100px) {
+    #foot {
+        flex-wrap: wrap;
+    }
+
+    #foot button {
+        width: 100%;
+    }
+
+    #foot div {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #foot div {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    #foot div span {
+        width: 100%;
+        text-align: center;
+    }
+}
